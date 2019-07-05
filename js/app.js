@@ -6,6 +6,7 @@ var wrapper = document.querySelector('#wrapper');
 var secondBook = document.querySelector('#book-list li:nth-child(2) .name');
 var allSpanTags = document.querySelectorAll('#book-list li .name')
 var bookList = document.querySelector('#book-list');
+var deleteBtns = document.querySelectorAll('#book-list .delete');
 
 console.log("-------Chapters 1 - 5 : Query Selectors-------");
 console.log("-------Chapters 1 - 5 : Node Types & Clones-------");
@@ -39,4 +40,4 @@ console.log('previous Element sibling', bookList.previousElementSibling); //Retu
 
 bookList.previousElementSibling.querySelector('p').innerHTML += "<br />Cradle To The Grave";
 
-console.log("-------Chapter 9 : Events-------");
+
