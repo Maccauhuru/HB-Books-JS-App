@@ -20,11 +20,17 @@ addBookForm.addEventListener('submit',(e)=>{
     const deleteBtn = document.createElement('span');
 
     //add content to elements
-    li.textContent = inputValue;
+    bookName.textContent = inputValue;
     deleteBtn.textContent = 'delete';
+
+
+    //add classes to elements
+    bookName.classList.add('name');
+    deleteBtn.classList.add('delete');
 
     //append the elements to DOM
     li.appendChild(bookName);
-    li.appendChild(bookName);
-    bookList.appendChild(li)
+    li.appendChild(deleteBtn);
+    bookList.appendChild(li);
+
 });
