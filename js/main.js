@@ -1,5 +1,7 @@
 const bookList = document.querySelector('#book-list ul');
 const addBookForm = document.forms['add-book'];
+const hideBooks = document.querySelector('#add-book #hide');
+const bookNames = bookList.getElementsByTagName('li');
 
 //Delete books from list
 bookList.addEventListener('click', (e) => {
@@ -34,3 +36,34 @@ addBookForm.addEventListener('submit',(e)=>{
     bookList.appendChild(li);
 
 });
+
+//Hide Books
+//Create an event listener on the check box
+hideBooks.addEventListener('change',(e)=>{
+     (hideBooks.checked) ? bookList.style.display = 'none' :bookList.style.display = 'initial'
+});
+
+//Search Books
+//Create a query selector for the input box
+const searchBooks = document.forms['search-books'].querySelector('input');
+searchBooks.addEventListener('keyup',(e)=>{
+    const searchTerm = e.target.value.toLowerCase();
+    Array.from(bookNames).forEach((book)=>{
+        const bookTitle = book.firstElementChild.textContent;
+        if(bookTitle.toLowerCase().includes(searchTerm)){
+            book.style.display = 'block';
+        } else {
+            book.style.display = 'none'
+        }
+    });
+});
+
+//tabbed content
+//listen for clicks on elements with a data-target attribute
+//if the attribute matches your id , display panel by setting class to active
+
+
+
+
+
+

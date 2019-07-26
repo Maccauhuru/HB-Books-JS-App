@@ -38,9 +38,25 @@
         </ul>
       </div>
       <form id="add-book">
+        <input type="checkbox" id="hide" />
+        <label for="hide">Hide All Books</label>
         <input type="text" placeholder="Add a book..." />
         <button>Add</button>
       </form>
+    </div>
+    <div id="tabbed-content">
+      <ul class="'tabs">
+        <li data-target="#about" class="active">About</li>
+        <li data-target="#contact">Contact</li>
+      </ul>
+      <div class="panel active" id="about">
+      <p>About Tab Here</p>
+        <p>Lots of content to add here.</p>
+      </div>
+      <div class="panel " id="contact">
+      <p>Contact Tab Here</p>
+        <p>Lots of contact details to add here.</p>
+      </div>
     </div>
     <script src="js/main.js"></script>
   </body>
